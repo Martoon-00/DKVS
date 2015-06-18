@@ -27,11 +27,7 @@ public class Reminder {
                 remind.run();
             }
         };
-        try {
-            timer.schedule(lastTask, timeout);
-        } catch (Exception e) {
-            int k = 5;
-        }
+        timer.schedule(lastTask, timeout);
         return this;
     }
 

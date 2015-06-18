@@ -29,13 +29,12 @@ public abstract class RaftClient {
     public RaftClient(int id) throws IOException {
         client = new MegaClient(id)
                 .setIdentifier(new Identifier(() ->
-                        String.format("[waiting ops: %2s %s] \u001B[33mClient %d\u001B[m",
-                                bar.paint(String.valueOf(reminders.size()), reminders.size()),
+                        String.format("[waiting ops: %s %s] \u001B[33mClient %d\u001B[m",
+                                bar.paint(String.format("%2d", reminders.size()), reminders.size()),
                                 bar.get(reminders.size()),
                                 id
                         )
                 ));
-
     }
 
     public abstract void startSession() throws IOException;

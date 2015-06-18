@@ -18,7 +18,7 @@ public class Main {
                 new RaftNode((Integer.parseInt(command[1]))).start();
                 break;
             case "client_auto":
-                if (args.length > 2)
+                if (command.length > 2)
                     new AutoClient(Integer.parseInt(command[1]), Integer.parseInt(command[2])).startSession();
                 else
                     new AutoClient(Integer.parseInt(command[1])).startSession();
