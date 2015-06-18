@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Out" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{ABSOLUTE} %5p   %m%n"/>
+        </Console>
+        <!--<File name="File" fileName="logfile.log" append="true">-->
+            <!--<PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n"/>-->
+        <!--</File>-->
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Out"/>
+            <!--<AppenderRef ref="File"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
