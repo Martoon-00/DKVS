@@ -8,12 +8,14 @@ Launch com.company.Main
 
 -) To launch a manual client, type "client_console <id>".
 
+-) To clear all journals, type "clear". When more than half of nodes are shutdown, correctness of system is lost, do not forget about it!
+
 Id for clients influences only on output logs and Judge functionality. When several clients with same id are launched under the same runtime, Judge may display errors which actually have no place
 (so in release version it may be preferred to disable judge and launch all clients with zero id)
 
 
 
-When nodes and client are launched under same runtime and Judge.ACTIVE is set to 'true', following errors will be logged:
+When nodes and clients are launched under same runtime and Judge.ACTIVE is set to 'true', following errors will be logged:
 -) different leaders exist at same term
 -) different nodes committed different logs at same index
 and warnings:
@@ -28,3 +30,4 @@ Notes:
 -) If logs should be redirected to file, make sure ru.ifmo.ivanov.lang.misc.LogText.COLORED is set to false.
 
 -) To communicate with nodes, you may extend ru.ifmo.ivanov.lang.client.RaftClient and use sendNewOperation() method.
+
